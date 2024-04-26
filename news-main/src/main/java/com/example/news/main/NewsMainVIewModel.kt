@@ -21,7 +21,7 @@ val state: StateFlow<State> = getAllArticlesUseCase.get().invoke(query = "androi
     .stateIn(viewModelScope, SharingStarted.Lazily,State.None)
 
     fun forceUpdate(){
-
+      TODO("Will not be implemented")
     }
 
 
