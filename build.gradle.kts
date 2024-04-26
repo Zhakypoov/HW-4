@@ -14,15 +14,15 @@ plugins {
     alias(libs.plugins.detect) apply false
 }
 
-allprojects.onEach {project ->
-    project.afterEvaluate{
-        with(project.plugins){
-            if((hasPlugin(libs.plugins.jetbrainsKotlinAndroid.get().pluginId))
+allprojects.onEach { project ->
+    project.afterEvaluate {
+        with(project.plugins) {
+            if ((hasPlugin(libs.plugins.jetbrainsKotlinAndroid.get().pluginId))
                 || hasPlugin(libs.plugins.jetbrainsKotlinJvm.get().pluginId)
-            ){
+            ) {
                 apply(libs.plugins.detect.get().pluginId)
 
-                project.extensions.configure<DetektExtension>{
+                project.extensions.configure<DetektExtension> {
                     config.setFrom(rootProject.files("default-detect-config.yml"))
                 }
                 project.dependencies.add("detektPlugins", libs.detekt.formatting.get().toString())

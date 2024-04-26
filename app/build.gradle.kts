@@ -21,8 +21,8 @@ android {
             useSupportLibrary = true
         }
 
-        buildConfigField("String","NEWS_API_KEY","\"cb0a7c7b4b5a4626b2110aa666641a38\"")
-        buildConfigField("String","NEWS_API_BASE_URL","\"https://newsapi.org/v2/\"")
+        buildConfigField("String", "NEWS_API_KEY", "\"cb0a7c7b4b5a4626b2110aa666641a38\"")
+        buildConfigField("String", "NEWS_API_BASE_URL", "\"https://newsapi.org/v2/\"")
 
 
     }
@@ -75,7 +75,6 @@ dependencies {
     implementation(project(":news-uikit"))
 
     debugImplementation(libs.okhttp.logging.interceptor)
-
 
 
 }
